@@ -17,13 +17,13 @@ public class AuthorizationService {
     @Autowired
     UserRepository userRepository;
 
-    public List<Authorities> getAuthorities(User user) {
-        if (isEmpty(user.getUserName()) || isEmpty(user.getPassword())) {
+    public List<Authorities> getAuthorities(String userName, String password) {
+        if (isEmpty(userName) || isEmpty(password)) {
             throw new InvalidCredentials("User name or password is empty");
         }
-        List<Authorities> userAuthorities = userRepository.getUserAuthorities(user.getUserName(), user.getPassword());
+        List<Authorities> userAuthorities = userRepository.getUserAuthorities(userName, password);
         if (isEmpty(userAuthorities)) {
-            throw new UnauthorizedUser("Unknown user " + user);
+            throw new UnauthorizedUser("Unknown user " + userName);
         }
         return userAuthorities;
     }

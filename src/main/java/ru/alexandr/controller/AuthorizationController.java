@@ -16,6 +16,6 @@ public class AuthorizationController {
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@RequestParam("userName") String userName, @RequestParam("password") String password) {
         System.out.println("i was here");
-        return authorizationService.getAuthorities(new User(userName, password));
+        return authorizationService.getAuthorities(userName, password);
     }
 }

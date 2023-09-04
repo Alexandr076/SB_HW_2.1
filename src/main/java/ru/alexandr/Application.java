@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import ru.alexandr.handlerMethodArgumentResolver.UserHandlerMethodArgumentResolver;
+import ru.alexandr.repository.UserRepository;
 
 import java.util.List;
 
@@ -22,6 +23,6 @@ public class Application extends WebMvcConfigurerAdapter {
         ApplicationContext a = SpringApplication.run(Application.class, args);
 
         // just for test
-//        a.getBean(UserRepository.class).createTempData();
+        a.getBean(UserRepository.class).createTempData();
     }
 }
