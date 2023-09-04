@@ -12,17 +12,18 @@ import java.util.List;
 
 
 @SpringBootApplication
-public class Application extends WebMvcConfigurerAdapter {
+public class Application  {
 
-    @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-        argumentResolvers.add(new UserHandlerMethodArgumentResolver());
-    }
+//    @Override
+//    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+//        argumentResolvers.add(new UserHandlerMethodArgumentResolver());
+//    }
 
     public static void main(String[] args) {
         ApplicationContext a = SpringApplication.run(Application.class, args);
 
         // just for test
         a.getBean(UserRepository.class).createTempData();
+        System.out.println("dhdfh");
     }
 }

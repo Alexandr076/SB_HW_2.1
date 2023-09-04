@@ -18,4 +18,10 @@ public class AuthorizationController {
         System.out.println("i was here");
         return authorizationService.getAuthorities(userName, password);
     }
+
+    @GetMapping("/authorize2")
+    public String getAuthorities2() {
+        System.out.println("i was here");
+        return "qwe";
+    }
 }
