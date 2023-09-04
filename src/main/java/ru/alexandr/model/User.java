@@ -1,18 +1,19 @@
 package ru.alexandr.model;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class User {
-//    @NotNull
-//    @NotBlank
-//    @Size(min = 3, max = 12)
+    @NotNull
+    @NotBlank
+    @Min(3)
     private String userName;
 
-//    @NotNull
-//    @NotBlank
-//    @Size(min = 4, max = 99)
+    @NotNull
+    @NotBlank
+    @Size(min = 4, max = 99)
     private String password;
 
     public User(String user, String password) {
