@@ -35,8 +35,8 @@ public class UserRepository {
 //        db.put("Yo", map2);
 //    }
 
-    public List<Authorities> getUserAuthorities(String user, String password) {
-        HashMap<String, List<Authorities>> hashMap = db.get(user);
+    public List<Authorities> getUserAuthorities(String userName, String password) {
+        HashMap<String, List<Authorities>> hashMap = db.get(userName);
         if (hashMap == null) return new ArrayList<>();
         return hashMap.get(password);
     }
