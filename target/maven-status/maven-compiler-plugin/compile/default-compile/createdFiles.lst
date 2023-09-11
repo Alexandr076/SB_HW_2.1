@@ -1,0 +1,10 @@
+ru\alexandr\handlerMethodArgumentResolver\UserHandlerMethodArgumentResolver.class
+ru\alexandr\repository\Authorities.class
+ru\alexandr\service\AuthorizationService.class
+ru\alexandr\repository\UserRepository.class
+ru\alexandr\exceptions\InvalidCredentials.class
+ru\alexandr\Application.class
+ru\alexandr\exceptions\ExceptionHandlerAdvice.class
+ru\alexandr\model\User.class
+ru\alexandr\exceptions\UnauthorizedUser.class
+ru\alexandr\controller\AuthorizationController.class
