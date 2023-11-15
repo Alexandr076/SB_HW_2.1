@@ -17,7 +17,16 @@ public class AuthorizationController {
 
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@Validated User user) {
-        System.out.println("dhdfhldflhjdfljhldkfj");
         return authorizationService.getAuthorities(user);
+    }
+
+    @GetMapping("/bye")
+    public String getBye() {
+        return "Just bye!!";
+    }
+
+    @GetMapping("/hello")
+    public String getJustHello(@Validated User user) {
+        return "Just hello!";
     }
 }
